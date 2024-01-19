@@ -2,41 +2,41 @@
   {
     "id": 1,
     "language": "Python",
-    "code": "print('Hello, World!')"
+    "code": "e29ef7989b41f445bb565314a3ba9f53:14fcd016eccc445ccb45e3f9497061879e1a18bf9e4d75a0217138d0f4a37b4f"
   },
   {
     "id": 2,
     "language": "Python",
-    "code": "def add(a, b):\n    return a + b"
+    "code": "e29ef7989b41f445bb565314a3ba9f53:14fcd016eccc445ccb45e3f9497061879e1a18bf9e4d75a0217138d0f4a37b4f"
   },
   {
     "id": 3,
     "language": "Python",
-    "code": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\n    def area(self):\n        return 3.14 * self.radius ** 2"
+    "code": "e29ef7989b41f445bb565314a3ba9f53:14fcd016eccc445ccb45e3f9497061879e1a18bf9e4d75a0217138d0f4a37b4f"
   },
   {
     "id": 4,
     "language": "JavaScript",
-    "code": "console.log('Hello, World!');"
+    "code": "e29ef7989b41f445bb565314a3ba9f53:14fcd016eccc445ccb45e3f9497061879e1a18bf9e4d75a0217138d0f4a37b4f"
   },
   {
     "id": 5,
     "language": "JavaScript",
-    "code": "function multiply(a, b) {\n    return a * b;\n}"
+    "code": "e29ef7989b41f445bb565314a3ba9f53:14fcd016eccc445ccb45e3f9497061879e1a18bf9e4d75a0217138d0f4a37b4f"
   },
   {
     "id": 6,
     "language": "JavaScript",
-    "code": "const square = num => num * num;"
+    "code": "e29ef7989b41f445bb565314a3ba9f53:14fcd016eccc445ccb45e3f9497061879e1a18bf9e4d75a0217138d0f4a37b4f"
   },
   {
     "id": 7,
     "language": "Java",
-    "code": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}"
+    "code": "e29ef7989b41f445bb565314a3ba9f53:14fcd016eccc445ccb45e3f9497061879e1a18bf9e4d75a0217138d0f4a37b4f"
   },
   {
     "id": 8,
     "language": "Java",
-    "code": "public class Rectangle {\n    private int width;\n    private int height;\n\n    public Rectangle(int width, int height) {\n        this.width = width;\n        this.height = height;\n    }\n\n    public int getArea() {\n        return width * height;\n    }\n}"
+    "code": "e29ef7989b41f445bb565314a3ba9f53:14fcd016eccc445ccb45e3f9497061879e1a18bf9e4d75a0217138d0f4a37b4f"
   }
 ]
