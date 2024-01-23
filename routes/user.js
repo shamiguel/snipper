@@ -2,6 +2,7 @@ const router = require('express').Router();
 const basicAuth = require('../middleware/basicAuth');
 const bcrypt = require('bcrypt');
 const authorize = require('../middleware/authorize');
+const jwt = require('jsonwebtoken');
 
 const users = []
 
@@ -37,7 +38,7 @@ router.post('/login', basicAuth, async(req, res)=>{
 
     const payload = { id: user.id, email: user.email};
 
-    const accessToken = jwt.sign(payload, process.end['TOKEN_SECRET'])
+    const accessToken = jwt.sign(payload, process.env['TOKEN_SECRET'])
 
     res.json({accessToken})
 })

@@ -1,7 +1,7 @@
 function basicAuth(req, res, next) {
     const authHeader = req.headers.authorization
   
-    if (!authHeader || !authHeader.startsWith('Basic ')) {
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
       return res.status(401).json({ error: 'Unauthorized' })
     }
   
@@ -9,6 +9,7 @@ function basicAuth(req, res, next) {
     const decodedCredentials = Buffer.from(encodedCredentials, 'base64').toString(
       'utf-8'
     )
+    console.log(decodedCredentials)
     const [email, password] = decodedCredentials.split(':')
   
     if (!email || !password) {
