@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const {encrypt, decrypt} = require('../utils/encrypt');
-const authorize = require('../middleware/authorize')
+const {requiresAuth} = require('express-openid-connect')
 const snippets = require('../seedData.json');
 
 let id = snippets.length; 
-router.post('/', authorize, (req, res) => {
+router.post('/', requiresAuth(), (req, res) => {
     const { language, code } = req.body 
 
     if(!language || !code){
@@ -23,7 +23,7 @@ router.post('/', authorize, (req, res) => {
     res.status(201).json(snippet)
 });
 
-router.get('/', authorize, (req, res) => {
+router.get('/', requiresAuth(), (req, res) => {
     const { language } = req.query
     console.log("enc",
         encrypt("print('Hello, World!')")
@@ -42,7 +42,7 @@ router.get('/', authorize, (req, res) => {
     res.json(decodedSnippet)
   })
 
-router.get('/:id', authorize, (req, res) => {
+router.get('/:id', requiresAuth(), (req, res) => {
     const id = parseInt(req.params.id);
     const snippet = snippets.find(snip => snip.id === id);
     if(!snippet){
