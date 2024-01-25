@@ -26,7 +26,16 @@ app.use(auth(config));
 
 app.get('/', (req, res) => {
   console.log(req.oidc.user)
-  res.send(req.oidc.isAuthenticated() ? `Hi ${req.oidc.user.given_name}, you're logged in!` : 'Logged out');
+  res.send(req.oidc.isAuthenticated() ? 
+  `
+  <h1> Hi ${req.oidc.user.given_name}</h1>
+  <p> you're logged in!</p>
+  <form action="/logout">
+		<button class="logout" type="submit">Sign out</button>
+	</form>
+  ` 
+  :
+  'Logged out');
 });
 // start the server
 app.listen(PORT, () => {
