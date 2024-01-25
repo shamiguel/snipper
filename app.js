@@ -30,6 +30,9 @@ app.get('/', (req, res) => {
   `
   <h1> Hi ${req.oidc.user.given_name}</h1>
   <p> you're logged in!</p>
+  <form action="/snippets">
+    <button class="snippets" type="submit">Look at snippets</button>
+  </form>
   <form action="/logout">
 		<button class="logout" type="submit">Sign out</button>
 	</form>
